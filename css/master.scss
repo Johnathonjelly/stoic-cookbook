@@ -1,0 +1,290 @@
+@import url( 'https://fonts.google.com/specimen/Lato');
+/* ==========================================================================
+     Colors:
+        Base Grey: #5D7E7F;
+        Light Blue: #8BBDBF;
+        Lighter Blue: #A7E3E5;
+        Lightest Blue: #BAFCFF;
+        Almost Black: #2E3F40;
+
+        Compliment color pinkish: #ecd4c5
+
+
+
+   ========================================================================== */
+$header-footer-base-color: #2E3F40;
+$head-font-color: #ecd4c5;
+$body-color: #5D7E7F;
+$bottom-foot-bar: #BAFCFF;
+$small-padding: 35px;
+$main-content-color: #A7E3E5;
+@mixin flex-around() {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin jumbotron() {
+    border-radius: 3%;
+    // padding: 15px 35px 15px 35px;
+}
+
+
+
+@mixin what-i-do-pictures() {
+    border-radius: 50%;
+    height: 150px;
+    padding: 25px 10px 25px 25px;
+    width: 150px;
+}
+@mixin main-content-styling() {
+    background-color: darken($main-content-color, 7%);
+    padding: $small-padding;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+/* ==========================================================================
+      Header Style
+========================================================================== */
+a {
+  color: lighten($head-font-color, 10%);
+  text-decoration: none;
+}
+
+.head {
+    background-color: darken($header-footer-base-color, 7%);
+    @include flex-around;
+    // position: fixed;
+    // width: 100vw !important;
+}
+
+.nav-list {
+    border-right: 1px solid;
+    color: lighten($head-font-color, 10%);
+    display: inline-block;
+    font-weight: bold;
+    padding: 15px 20px 15px 15px;
+    text-align: center;
+}
+
+img.site-logo {
+    height: 40px;
+    padding: 7px;
+    width: 40px;
+}
+
+.title {
+    align-self: center;
+}
+
+.title-text {
+    color: white;
+    font-family: 'Pacifico', 'cursive';
+    font-weight: lighter;
+    padding: 3px 0 0;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+/* ==========================================================================
+      Main Content Style
+========================================================================== */
+.aboutme-li {
+    padding: 25px;
+}
+
+body {
+    background-color: lighten($body-color, 7%);
+}
+
+.books-food-nav {
+    @include jumbotron;
+    background-color: #605a71;
+
+}
+
+.center-landing {
+    display: flex;
+    justify-content: center;
+}
+
+h2, h3 {
+  padding-left: 15px;
+}
+
+html {
+    color: #222;
+    font-family: Lato, "Times New Roman", Times, serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.jumbotron-li-item {
+  padding: 5px 10px 10px 5px;
+}
+
+.landing-pic {
+    margin: 0 auto;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.main-about-me {
+    @include main-content-styling;
+}
+
+.main-content {
+    @include flex-around;
+    @include main-content-styling;
+    // flex-flow: row wrap;
+}
+
+.main-left {
+    padding-right: 25px;
+}
+
+.main-right {
+    padding-left: 25px;
+}
+
+.my-hobby-content {
+    display: flex;
+    flex-basis: 65vw;
+    flex-flow: row wrap;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.stand-out {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.what-i-do-pics {
+    @include what-i-do-pictures;
+}
+/* ==========================================================================
+      Footer Style
+========================================================================== */
+footer {
+    @include flex-around;
+    background-color: $header-footer-base-color;
+    color: $head-font-color;
+}
+
+.footer-bar {
+    @include flex-around;
+    background-color: $bottom-foot-bar;
+    font-weight: bolder;
+    padding: $small-padding;
+}
+
+.footer-left {
+    padding: $small-padding;
+}
+
+.footer-middle {
+    align-self: center;
+    letter-spacing: 4px;
+    padding: $small-padding;
+}
+
+.footer-right {
+    padding: $small-padding;
+}
+
+.Epictetus {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.mission {
+    line-height: 60px;
+}
+/* ==========================================================================
+      Remove small bit of white space at top of page
+========================================================================== */
+* {
+    margin: 0;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+/* ==========================================================================
+      Site-Container Styles
+========================================================================== */
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+/* ==========================================================================
+   Utility classes
+
+   ========================================================================== */
+.utility {
+    border: 2px solid black;
+}
+
+a {
+  color: #e9d7e9;
+}
+
+a:hover {
+  color: #eca444;
+}
+
+a:active {
+  color: #eca444;
+}
+
+
+/* ==========================================================================
+           Media Queries for Responsive Design.
+
+   ========================================================================== */
+/* Style adjustments for viewports that meet the condition */
